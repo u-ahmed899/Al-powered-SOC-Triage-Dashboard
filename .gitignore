@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Data & Models (Keep the folder, ignore large files)
+data/*.csv
+data/*.json
+models/*.pkl
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
