@@ -42,3 +42,36 @@ Security Operations Centers face severe "Alert Fatigue" due to thousands of dail
    ```bash
    git clone https://github.com/yourusername/soc-triage-dashboard.git
    cd soc-triage-dashboard
+
+2. Create a virtual environment & install dependencies:
+    ```bash
+   
+   python -m venv venv
+   # Windows: 
+    venv\Scripts\activate
+   # Mac/Linux:
+   source venv/bin/activate
+
+   pip install -r requirements.txt
+
+3. Initialize Data & Train the Model:
+This will generate initial synthetic logs and train the ML model.
+   ```bash
+   python setup_complete.py
+
+4. Start the Log Generator (Terminal 1):
+    ```bash
+    python live_log_generator.py
+
+5. Start the Flask Dashboard (Terminal 2):
+    ```bash
+   python src/dashboard.py
+
+**View the Dashboard:**
+Open http://localhost:5000 in your browser. You should see live attacks populating every few seconds!
+
+**🔮 Future Enhancements**
+□ Dockerize the application for easy deployment.
+□ Integrate with real-world log sources (e.g., Wazuh, ELK Stack).
+□ Implement user authentication (JWT) for SOC analysts.
+□ Add an incident reporting export feature (PDF/CSV).
